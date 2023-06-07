@@ -37,3 +37,70 @@ My primary aim was to create a highly accurate machine learning model that minim
 *   **Seasons** - Season Name
 *   **Holiday** - Whether Holiday or Not
 *   **Functional Day** - Functional Day or Not
+
+
+# Approach 
+
+## ***1. Know Your Data***
+### Check Unique Values for each variable.
+#### Missing Values/Null Values
+     Our data set didn’t have any null values to be treated.
+ 
+# Univariate analysis
+
+![Bike Project](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/2ab6f6da-d382-47ce-960c-9fef880b61f7)
+
+![Bike project 2](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/583fe06a-5ac9-4a07-a818-f2b596094fa2)
+
+In order to understand the distribution for each feature, I plotted distplot along with its mean and median. Distplot is shows both histogram and kde plot and is best suited for continous data.
+
+# Insights Gained
+ 
+Right/Positive Skewed Distribution: Mode < Median < Mean: Rented_Bike_Count, Wind_speed, Solar Radiation
+
+No Skew: Mean = Median = Mode : Hour, Temperature, Humidity,Rainfall,Snowfall
+
+Left/Negative Skewed Distribution: Mean < Median < Mode: visibility
+
+# Bivariate Analysis
+
+![Bike per hour](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/8931b0d2-7df1-4903-a87d-ac02b6d300ae)
+
+# Insights Gained
+
+Lineplot for hour and rented bike count shows that:
+* Demand for bike is more during 8-10 in morning and 18-20 in night.
+* Bike demand from midnight start decreasing till 4 in morning then gradually increase and comes at peak in night.
+
+# Multivariate Analysis
+
+![Multi](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/a50e8a59-b03d-4930-b623-6c96bde7f404)
+
+# Insights Gained
+It is important to maintain demand based on the time to generate stable profit.
+Based on time period if unable to maintain demand, it will create a chance of new competition.
+
+
+# Various ML Models implemented and their evaluation matrices Performance
+
+![Matrices ](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/931a32ab-0c91-442b-b28c-39191b4bca1f)
+
+Based on the results, I want to consider using the Xg_boost_cv i.e., XGBRegressor with hyperparameter tunned model as final model. This model has the highest R2 values on test sets, which indicates that it is doing a good job of explaining the variance in the target variable. It also has the lowest MAE and RMSE values on the test set, which means that it is making relatively small and accurate predictions.
+
+
+# Conclusion
+The main goal of the project was to stablize bike demand at every hour. Based on the objective, it was found that:
+
+* XGBRegressor models with hyperparameter tuning and CV shows promising result with R2 score of 0.9, therefore it can be used to solve this problem.
+
+* Bike rental count is high during working days than on weekend.
+
+* Bike demand shows peek around 8-9 AM in the morning and 6 - 7pm in the evening.
+
+* People prefer to rent bike more in summer than in winter.
+
+* Bike demand is more on clear days than on snowy or rainy days.
+
+* Temperature range from 22 to 25(°C) has more demand for bike.
+
+* 'Hour', 'Temperature(°C)', 'Humidity', 'Wind_speed','Visibility ', 'Solar_Radiation', 'Rainfall', 'Snowfall', 'Seasons', 'day of week ' regulates bike demand.

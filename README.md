@@ -80,10 +80,9 @@ Lineplot for hour and rented bike count shows that:
 It is important to maintain demand based on the time to generate stable profit.
 Based on time period if unable to maintain demand, it will create a chance of new competition.
 
-
 # Various ML Models implemented and their evaluation matrices Performance
 
-![Matrices ](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/931a32ab-0c91-442b-b28c-39191b4bca1f)
+![Matrices](https://github.com/Ujjwalrai7/Capestone-Project-Bike-sharing-demand-prediction/assets/125723652/bb0dfaa5-2b9a-4328-b058-b355ada800aa)
 
 Based on the results, I want to consider using the Xg_boost_cv i.e., XGBRegressor with hyperparameter tunned model as final model. This model has the highest R2 values on test sets, which indicates that it is doing a good job of explaining the variance in the target variable. It also has the lowest MAE and RMSE values on the test set, which means that it is making relatively small and accurate predictions.
 
